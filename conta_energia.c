@@ -45,7 +45,7 @@ int main() {
             break;
 
         default:
-            printf("OPCAfaafO INVALIDA. TENTE NOVAMENTE! \n");
+            printf("OPCAO INVALIDA. TENTE NOVAMENTE! \n");
     }
     return 0;
 }
