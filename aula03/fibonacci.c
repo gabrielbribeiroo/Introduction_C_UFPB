@@ -28,7 +28,7 @@ void Fibonacci (int numero){
 int main() {
     int numero;
 
-    printf("Ate qual termo da sequência de Fibonacci você quer? \n");
+    printf("Ate qual termo da sequência de Fibonacci voce quer? \n");
     scanf("%d", &numero);
 
     Fibonacci(numero);
