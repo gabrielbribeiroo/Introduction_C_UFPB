@@ -1,3 +1,7 @@
+ /*
+  Faça um programa que calcule e mostre o valor de S
+ */
+
 #include <stdio.h>
 
 int main() {

@@ -1,3 +1,7 @@
+/*
+Faça um programa que receba três notas, calcule e mostre a média aritmética das notas.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

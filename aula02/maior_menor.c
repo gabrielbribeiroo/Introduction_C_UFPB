@@ -1,3 +1,7 @@
+/*
+Escreva um programa que leia três valores e mostre qual é o maior valor e qual é o menor valor.
+*/
+
 #include <stdio.h>
 
 int main () {

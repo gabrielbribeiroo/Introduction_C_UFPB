@@ -1,3 +1,18 @@
+/*
+Escreva um programa que calcule o Valor a Pagar pela conta de energia elétrica para uma determinada Classe Consumidora. 
+Veja as informações a seguir:
+    a) O programa deve receber como dados de entrada: o tipo da Classe Consumidora, (conforme definido na Tabela 1) 
+e o Consumo em quilowatts/hora (KWh);
+    b) O cálculo do Valor do Fornecimento (VF), em Reais (R$), é definido pela seguinte fórmula: VF = Consumo x Tarifa, 
+onde a tarifa é definida na Tabela 1, conforme a classe consumidora;
+    c) O Valor a Pagar (VP) é definido pela seguinte fórmula: VP = VF + ICMS, 
+onde a taxa de ICMS é calculada aplicando uma alíquota de 30% ao valor do fornecimento (ICMS = 0.3 x VF).
+Classe Consumidora Tarifa (R$)
+A                   0.5
+B                   0.8
+C                   1.0
+*/
+
 #include <stdio.h>
 
 int main() {

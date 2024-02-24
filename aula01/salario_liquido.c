@@ -1,3 +1,12 @@
+/*
+Faça um programa que leia o salário bruto de um funcionário.
+Calcule e mostre o seu salário líquido. 
+Sabe-se que: 
+    • O salário bruto teve um reajuste de 38%; 
+    • O funcionário receberá uma gratificação de 20% do salário bruto; 
+    • O salário total é descontado em 15%.
+*/
+
 #include <stdio.h>
 
 int main() {

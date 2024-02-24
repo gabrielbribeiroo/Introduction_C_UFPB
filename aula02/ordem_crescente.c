@@ -1,3 +1,7 @@
+/*
+Escreva um programa que leia 3 números inteiros e mostre-os em ordem crescente.
+*/
+
 #include <stdio.h>
 
 int main() {

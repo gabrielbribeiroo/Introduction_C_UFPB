@@ -1,3 +1,12 @@
+/*
+Sabe-se que o quilowatt de energia custa 1/5 do salário mínimo. 
+Faça um programa que receba o valor do salário mínimo e a quantidade de quilowatts consumida por uma residência. 
+Calcule e mostra: 
+    • O valor de cada quilowatt; 
+    • O valor a ser pago por essa residência; 
+    • O valor a ser pago com desconto de 15%.
+*/
+
 #include <stdio.h>
 
 int main() {

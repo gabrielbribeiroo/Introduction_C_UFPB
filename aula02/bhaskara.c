@@ -1,3 +1,13 @@
+/*
+Faça um programa que receba como entrada os coeficientes (a, b, c) de uma equação do 2º grau.
+Calcule e mostre as raízes desta equação. 
+As raízes de uma equação do 2º grau são calculadas pela fórmula: (x = (-b + sqrt(delta)) / 2a), onde delta é o discriminante da equação.
+Para esse discriminante, há três possíveis situações:
+    a) Se D < 0 – não há solução real, pois não existe raiz quadrada de número negativo;
+    b) Se D = 0 – há duas soluções iguais;
+    c) Se D > 0 – há duas soluções reais e diferentes: x1 e x2.
+*/
+
 #include <stdio.h>
 #include <math.h>
 

@@ -1,3 +1,11 @@
+/*
+Escreva um programa que leia um número indeterminado de valores (até que o usuário digite o zero). 
+Calcule e mostre:
+    a soma dos números;
+    a média dos números lidos;
+    o maior e o menor número dentre eles;
+    a quantidade de números negativos.
+*/
 #include <stdio.h>
 
 int main() {

@@ -1,3 +1,9 @@
+/*
+Faça um programa que leia 2 valores inteiros e uma das seguintes operações a serem executadas 
+(codificada das eguinte forma: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). 
+Calcular e escrever o resultado dessa operação sobre os dois valores lidos.
+*/
+
 #include <stdio.h>
 
 int main(void){

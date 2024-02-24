@@ -1,3 +1,9 @@
+/*
+Faça um programa que receba dois números inteiros, calcule e mostre:
+    a. A divisão do primeiro número pelo segundo;
+    b. O resto da divisão entre eles.
+*/
+
 #include <stdio.h>
 
 int main() {

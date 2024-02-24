@@ -1,3 +1,9 @@
+/*
+Faça um programa que receba um número inteiro representando a quantidade de segundos.
+Calcule e mostre a quantidade de horas, minutos e segundos que esse número representa. 
+Por exemplo, o número 5984 corresponde a 1 hora 39 minutos e 44 segundos.
+*/
+
 #include <stdio.h>
 
 int main() {
