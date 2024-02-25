@@ -12,40 +12,37 @@ int main () {
     if (num1>num2 && num2>num3) {
         maior = num1;
         maior_2 = num2;
-        printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2);
     }
     else {
         if (num1>num2) {
             maior = num1;
             maior_2 = num3;
-            printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2);
         }
         else {
             if (num1>num3) {
                 maior = num2;
                 maior_2 = num1;
-                printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2);
             }
             else {
                 if (num2>num3){
                     maior = num2;
-                    maior_2 = num3;
-                    printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2);                               
+                    maior_2 = num3;                         
                 }
                 else {
                     if (num3>num2) {
                         maior = num3;
                         maior_2 = num2;
-                        printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2); 
                     }
                     else {
                         maior = num3;
-                        maior_2 = num1;
-                        printf("Soma dos maiores valores: %.2f + %.2f \n", maior, maior_2);    
+                        maior_2 = num1; 
                     }
                 }
             }
         }
     }
+
+    printf("\nSoma dos maiores valores: %.2f + %.2f = %.2f \n", maior, maior_2, maior+maior_2);
+
     return 0;
 }
