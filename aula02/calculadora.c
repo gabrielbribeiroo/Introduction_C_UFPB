@@ -8,8 +8,7 @@ Calcular e escrever o resultado dessa operação sobre os dois valores lidos.
 
 int main(void){
 
-    float numero1, numero2;
-    int escolha;
+    int numero1, numero2, escolha;
 
     printf("----------  CALCULADORA  ---------- \n\n");
     printf("******** MENU DE OPERACAO ******* \n\n");
@@ -24,29 +23,35 @@ int main(void){
         case 1:
             printf("VOCE ESCOLHEU A OPCAO DE ADICAO... \n");
             printf("Digite dois valores: \n");
-            scanf("%f %f", &numero1, &numero2);
-            printf("O resultado da sua adicao, entre os numeros %.2f e %.2f, eh %.2f \n", numero1, numero2, numero1+numero2);
+            scanf("%d %d", &numero1, &numero2);
+            printf("O resultado da sua adicao, entre os numeros %d e %d, eh %d \n", numero1, numero2, numero1+numero2);
             break;
 
         case 2:
             printf("VOCE ESCOLHEU A OPCAO DE SUBTRACAO... \n");
             printf("Digite dois valores: \n");
-            scanf("%f %f", &numero1, &numero2);
-            printf("O resultado da sua subtracao, entre os numeros %.2f e %.2f, eh %.2f \n", numero1, numero2, numero1-numero2);
+            scanf("%d %d", &numero1, &numero2);
+            printf("O resultado da sua subtracao, entre os numeros %d e %d, eh %d \n", numero1, numero2, numero1-numero2);
             break;
 
         case 3:
             printf("VOCE ESCOLHEU A OPCAO DE DIVISAO... \n");
             printf("Digite dois valores: \n");
-            scanf("%f %f", &numero1, &numero2);
-            printf("O resultado da sua divisao, entre os numeros %.2f e %.2f, eh %.2f \n", numero1, numero2, numero1/numero2);
+            scanf("%d %d", &numero1, &numero2);
+            if (numero2 != 0) {
+                printf("O resultado da sua divisao, entre os numeros %d e %d, eh %d \n", numero1, numero2, numero1/numero2);
+            }
+            else {
+                printf("ERRO! Divisao por zero... \n");
+            }
+            
             break;
 
         case 4: 
             printf("VOCE ESCOLHEU A OPCAO DE MULTIPLICACAO... \n");
             printf("Digite dois valores: \n");
-            scanf("%f %f", &numero1, &numero2);
-            printf("O resultado da sua multiplicacao, entre os numeros %.2f e %.2f, eh %.2f \n", numero1, numero2, numero1*numero2);
+            scanf("%d %d", &numero1, &numero2);
+            printf("O resultado da sua multiplicacao, entre os numeros %d e %d, eh %d \n", numero1, numero2, numero1*numero2);
             break;
 
         default:
