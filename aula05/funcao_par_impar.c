@@ -5,7 +5,6 @@ A função retorna 0, se o número for par, ou 1, se o número for ímpar.
 
 #include <stdio.h>
 
-
 int ParImpar (int a) {
     if (a % 2 == 0) {
         return 0;

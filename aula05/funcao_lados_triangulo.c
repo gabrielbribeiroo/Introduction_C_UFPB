@@ -5,6 +5,7 @@ A função deverá retornar:
     - 1 se for isósceles (2 lados iguais);
     - 2 se for escaleno (os 3 lados diferentes).
 */
+
 #include <stdio.h>
 
 int LadosTriangulo (float a, float b, float c) {
