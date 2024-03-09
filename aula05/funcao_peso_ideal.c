@@ -33,12 +33,12 @@ int main() {
             printf("Peso ideal: %.2f \n", CalculaPesoIdeal(sexo, altura));
         }
         else {
-            printf("Sexo invalido. Tente novamente! \n");
+            printf("Sexo invalido. Tente novamente!\n");
         }
     }
 
     else {
-        printf("Altura invalida. Tente novamente! \n");
+        printf("Altura invalida. Tente novamente!\n");
     }
 
     return 0;
