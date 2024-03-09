@@ -27,12 +27,12 @@ int main() {
 
     else {
         int tipo = ParImpar(num);
-        switch (tipo)
-        {
+        if (tipo == 0) {
+            printf("O numero %d eh PAR. \n", num);
         }
-        printf("[PAR] - 0\n"
-               "[IMPAR] - 1\n"
-               "Numero %d = %d\n", num, ParImpar(num));
+        else {
+            printf("O numero %d eh IMPAR. \n", num);
+        }
     }
 
     return 0;
