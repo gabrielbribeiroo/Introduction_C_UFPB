@@ -26,6 +26,10 @@ int main() {
     }
 
     else {
+        int tipo = ParImpar(num);
+        switch (tipo)
+        {
+        }
         printf("[PAR] - 0\n"
                "[IMPAR] - 1\n"
                "Numero %d = %d\n", num, ParImpar(num));

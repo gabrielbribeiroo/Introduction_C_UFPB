@@ -39,6 +39,7 @@ int main() {
             break;
         default:
             printf("Eh um triangulo escaleno. \n");
+            break;
         }
     }
     else {
