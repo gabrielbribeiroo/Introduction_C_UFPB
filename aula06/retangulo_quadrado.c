@@ -1,6 +1,9 @@
 /*
-Altere a função anterior para que além de devolver os parâmetros A e P, respectivamente a área e o perímetro deste retângulo
-Retorne 1 caso o retângulo seja um quadrado, ou 0, caso contrário.
+Escreva uma função chamada medidasDoRetangulo que recebeos parâmetros b e h 
+(as medidas em centímetros dos dois lados de um retângulo) e retorne:
+    - 1 se for um quadrado
+    - 0 se não for um quadrado
+ Mostre os resultados na função main().
 */
 
 #include <stdio.h>
