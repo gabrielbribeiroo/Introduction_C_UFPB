@@ -21,12 +21,6 @@ void LeVetorA(int a[], int t) {
     }
 }
 
-void FormaVetorB(int a[], int b[], int t) {
-    for (int i=0; i<t; i++) {
-        b[i] = Fatorial(a[i]);
-    }
-}
-
 int Fatorial(int n) {
     int fatorial = 1;
 
@@ -38,6 +32,12 @@ int Fatorial(int n) {
             fatorial *= i;
         }
         return fatorial;
+    }
+}
+
+void FormaVetorB(int a[], int b[], int t) {
+    for (int i=0; i<t; i++) {
+        b[i] = Fatorial(a[i]);
     }
 }
 
