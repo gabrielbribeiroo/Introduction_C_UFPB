@@ -8,7 +8,8 @@ Faça um programa que receba três notas, calcule e mostre a média aritmética 
 int main () {
     float nota1, nota2, nota3, media;
     printf("Digite a primeira nota: \n");
-    scanf("%f", &nota1);
+    scanf("%f", &nota1);//2
+    
     printf("Digite a segunda nota: \n");
     scanf("%f", &nota2);
     printf("Digite a terceira nota: \n");
