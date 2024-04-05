@@ -32,7 +32,7 @@ void MostraMatriz(int m[][3], int L, int C) {
     }
 }
 
-int SomaDiagonalPrincipal(int m[][3], int L, int C) {
+int SomaDiagonalPrincipal(int m[][3], int L) {
     int i, soma = 0;
 
     for (i=0; i<L; i++) {
@@ -58,6 +58,8 @@ void MostraDiagonal(int D[], int t) {
     for (i=0; i<t; i++) {
         printf("%4d ", D[i]);
     }
+
+    printf("\n");
 }
 
 int main() {
@@ -66,9 +68,9 @@ int main() {
     srand(time(NULL));
     GeraMatriz(A, 3, 3);
     MostraMatriz(A, 3, 3);
-    SomaDiagonalPrincipal(A, 3, 3);
+    SomaDiagonalPrincipal(A, 3);
 
-    printf("Soma dos elementos da diagonal principal = %d\n", SomaDiagonalPrincipal(A, 3, 3));
+    printf("Soma dos elementos da diagonal principal = %d\n", SomaDiagonalPrincipal(A, 3));
 
     CalculaDiagonal(A, 3, D);
     MostraDiagonal(D, 3);
