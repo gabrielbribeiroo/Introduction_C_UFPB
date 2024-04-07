@@ -53,7 +53,7 @@ void CalculaDiagonal(int m[][3], int L, int D[]) {
 void MostraDiagonal(int D[], int t) {
     int i;
 
-    printf("\n\nVetor D  = ");
+    printf("\nVetor Diagonal: ");
 
     for (i=0; i<t; i++) {
         printf("%4d ", D[i]);
