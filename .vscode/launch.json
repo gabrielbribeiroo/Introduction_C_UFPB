@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/workspaces/Introducao_C_UFPB/matrizes",
-      "program": "/workspaces/Introducao_C_UFPB/matrizes/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/strings",
+      "program": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/strings/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
