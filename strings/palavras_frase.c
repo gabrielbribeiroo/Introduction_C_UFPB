@@ -13,23 +13,23 @@ potentes
 #define TAM 101
 
 void MostraPalavras(const char *str) {
-  int i;
-  for (i = 0; str[i] != '\0'; i++) {
-    printf("%c", str[i]);
+    int i;
+    for (i = 0; str[i] != '\0'; i++) {
+      printf("%c", str[i]);
 
-    if (str[i] == ' ') {
-      printf("\n");
+      if (str[i] == ' ') {
+        printf("\n");
+      }
     }
-  }
 }
 
 int main() {
-  char frase[TAM];
+    char frase[TAM];
 
-  printf("Digite a frase [MAXIMO DE %d caracteres]:\n", TAM - 1);
-  fgets(frase, TAM, stdin);
-  
-  MostraPalavras(frase);
+    printf("Digite a frase [MAXIMO DE %d caracteres]:\n", TAM - 1);
+    fgets(frase, TAM, stdin);
+    
+    MostraPalavras(frase);
 
-  return 0;
+    return 0;
 }
