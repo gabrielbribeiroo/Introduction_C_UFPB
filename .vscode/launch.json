@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/strings",
-      "program": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/strings/build/Debug/outDebug",
+      "cwd": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/introdução",
+      "program": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/introdução/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
