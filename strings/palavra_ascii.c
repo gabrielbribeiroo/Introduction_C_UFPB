@@ -10,7 +10,8 @@ Imprima a string resultante.
 
 void LerPalavra(char *palavra) {
     printf("Digite uma palavra [MAXIMO DE %d caracteres]:\n", TAM-1);
-    fgets(palavra, sizeof(palavra), stdin);
+    fgets(palavra, TAM, stdin);
+    palavra[strlen(palavra) - 1] = '\0';
 }
 
 void SomarASCII(char *palavra) {
