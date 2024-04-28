@@ -12,7 +12,7 @@ Crie um menu para:
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 3
+#define MAX 20
 
 typedef struct {
     int ano;
