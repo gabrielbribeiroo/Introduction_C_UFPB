@@ -15,32 +15,32 @@ int main() {
 
     for (int i = 1; i <= 15; i++) {
         printf("Digite a altura da pessoa: \n");
-        scanf("%f", &altura);
+        scanf("%f", &altura); // Lê a altura
         printf("Digite o sexo da pessoa [M(masculino) / F(feminino)]: \n");
-        scanf(" %c", &sexo);
+        scanf(" %c", &sexo); // Lê o sexo
 
         if (sexo == 'M') {
-            qnt_masc++;
+            qnt_masc++; // Aumenta a quantidade do sexo masculino de 1 em 1
         } else {
-            qnt_fem++;
-            soma_altura_fem += altura;
+            qnt_fem++; // Aumenta a quantidade do sexo feminino de 1 em 1
+            soma_altura_fem += altura; // Soma as alturas das mulheres
         }
 
         if (altura > maior_altura) {
-            maior_altura = altura;
+            maior_altura = altura; // Atualiza o valor da maior altura
         }
 
         if (altura < menor_altura) {
-            menor_altura = altura;
+            menor_altura = altura; // Atualiza o valor da menor altura
         }
     }
 
-    media_altura_fem = soma_altura_fem / qnt_fem;
+    media_altura_fem = soma_altura_fem / qnt_fem; // Calcula a média das alturas femininas
 
     printf("\nMenor altura do grupo: %.2f\n"
             "Maior altura do grupo: %.2f\n"
             "Media da altura das mulheres: %.2f\n"
-            "Numero de homens: %d\n", menor_altura, maior_altura, media_altura_fem, qnt_masc);
+            "Numero de homens: %d\n", menor_altura, maior_altura, media_altura_fem, qnt_masc); // Mostra os valores
             
     return 0;
 }

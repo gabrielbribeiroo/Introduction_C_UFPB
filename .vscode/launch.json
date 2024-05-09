@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/atividade_beecrowd",
-      "program": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/atividade_beecrowd/build/Debug/outDebug",
+      "cwd": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/condicionais_2",
+      "program": "c:/Users/gabri/OneDrive/Documentos/GitHub/Introducao_C_UFPB/condicionais_2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
