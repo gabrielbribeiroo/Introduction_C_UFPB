@@ -23,12 +23,12 @@ int main() {
     while ((a!= 0) && (b != 0)) {
         if (b > a) {
             for (i = a; i <= b; i++) {
-                printf("%d ", i);
+                printf("%d ", i); // Mostra os valores de a até b
             }
         } 
         else {
             for (i = b; i <= a; i++) {
-                printf("%d ", i);
+                printf("%d ", i); // Mostra os valores de b até a
             }
         }
 
