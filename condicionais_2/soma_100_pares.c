@@ -10,7 +10,7 @@ int main() {
 
     for (int i=0; i<202; i++) {
         if (i % 2 == 0) {
-            soma_pares += i;
+            soma_pares += i; // Soma os 100 primeiros números pares
         }
     }
     
