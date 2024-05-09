@@ -11,15 +11,19 @@ int main() {
     float peso, peso_magro=1500, peso_gordo=0;
 
     printf("Digite a identificacao do boi [0 p/ FINALIZAR]: \n");
-    scanf ("%d", &id);
+    scanf ("%d", &id); // Lê a identificação 
 
     while (id !=0) {
         printf("Digite o peso do boi [em quilogramas (kg)]: \n");
-        scanf ("%f", &peso);
+        scanf ("%f", &peso); // Lê o peso
+        
+        // Atualiza o menor peso
         if (peso < peso_magro) {
-            peso_magro = peso;
-            id_magro = id;
+            peso_magro = peso; 
+            id_magro = id; 
         }
+
+        // Atualiza o maior peso
         if (peso > peso_gordo) {
             peso_gordo = peso;
             id_gordo = id;
