@@ -12,7 +12,7 @@ int main() {
     printf("TABELA DE CONVERSAO Fahrenheit para Celsius \n\n");
 
     for (f=50; f<=65; f++) {
-        c = (f - 32) / 1.8;
+        c = (f - 32) / 1.8; // Calcula a conversão de Fahrenheit para Celsius
         printf("Fahrenheit = %d ---------- Celsius = %.2f \n", f, c);
     }
     
