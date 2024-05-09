@@ -16,6 +16,7 @@ int main() {
     int operacao;
     float num1, num2;
 
+    // Looping de calculadora básica
     do {
         printf("Menu de opcoes: \n"
             "1. Adicao \n"
