@@ -16,14 +16,14 @@ int main() {
     int k, n;
 
     printf("Digite o numero da potencia: \n");
-    scanf("%d", &k);
+    scanf("%d", &k); // Lê a base
     printf("Digite a quantidade de potências: \n");
-    scanf("%d", &n);
+    scanf("%d", &n); // Lê o expoente
 
     printf("As %d primeiras potencias de %d sao: \n", n, k);
 
     for (int i = 1; i <= n; i++) {
-        double resultado = pow(k,i);
+        double resultado = pow(k,i); // Calcula a potenciação de um número k elevado a i
         printf("%d elevado a %d = %.0f\n", k, i, resultado);
     }
     return 0;
