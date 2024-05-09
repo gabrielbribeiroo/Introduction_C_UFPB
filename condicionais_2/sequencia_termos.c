@@ -11,10 +11,10 @@ int main() {
     int qnt_termos, termo1 = 2, termo2 = 7, termo3 = 3;
 
     printf("Ate qual termo da sequência voce quer? \n");
-    scanf("%d", &qnt_termos);
+    scanf("%d", &qnt_termos); // Lê a quantidade de termos
 
     if (qnt_termos < 3) {
-        printf("A sequenicia requer pelo menos 3 numeros. Tente novamente. \n");
+        printf("A sequencia requer pelo menos 3 numeros. Tente novamente. \n");
         return 1; // retorna um erro
     }
 
@@ -22,14 +22,14 @@ int main() {
 
     for (int i = 4; i <= qnt_termos; i++) {
         if (i % 3 == 1) {
-            termo1 = termo1 * 2;
+            termo1 = termo1 * 2; // Dobra o valor do primeiro termo
             printf("%d, ", termo1);
         } else if (i % 3 == 2) {
-            termo2 = termo2 * 3;
+            termo2 = termo2 * 3; // Triplica o valor do segundo termo
             printf("%d, ", termo2);
         } else {
             termo3 = termo3 * 4;
-            printf("%d, ", termo3);
+            printf("%d, ", termo3); // Quadriplica o valor do terceiro termo
         }
     }
 
