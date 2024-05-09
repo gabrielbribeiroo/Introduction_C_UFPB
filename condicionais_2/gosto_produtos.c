@@ -20,10 +20,11 @@ int main() {
 
     for (int i = 1; i <= 20; i++) {
         printf("Digite o sexo [M(masculino) / F(feminino)]: \n");
-        scanf(" %c", &sexo);
+        scanf(" %c", &sexo); // Lê o sexo
         printf("Gostou do produto [S(sim) / N(nao)]? \n");
-        scanf(" %c", &opiniao);
+        scanf(" %c", &opiniao); // Lê a opinião
 
+        // Verificação do sexo e da opinião
         if ((sexo == 'M') && (opiniao == 'N')) {
             tot_masc++;
             qnt_masc_nao++;
@@ -41,6 +42,7 @@ int main() {
         }        
     }
 
+    // Cálculo das porcentagens
     percent_fem_sim = ((float)qnt_fem_sim / tot_fem) * 100;
     percent_masc_nao = ((float)qnt_masc_nao / tot_masc) * 100;
 
