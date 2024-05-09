@@ -8,7 +8,7 @@ int main() {
 
     for (int i=0; i<100; i++) {
         if (i % 4 == 0) {
-            printf("%d ", i);
+            printf("%d ", i); // Mostra os valores divisíveis por 4
         }
     }
     printf("\n");
