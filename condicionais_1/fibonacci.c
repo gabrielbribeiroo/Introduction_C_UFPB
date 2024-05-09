@@ -12,16 +12,16 @@ Escreva um programa que mostra na tela os n primeiros elementos da sequência de
 #include <stdio.h>
 
 void Fibonacci (int numero){
-    int antepenultimo = 1, penultimo = 1, atual;
+    int antepenultimo = 1, penultimo = 1, atual; // Sequência começando com os valores 1 e 1
 
     printf("Sequência de Fibonacci com %d elementos: \n", numero);
     printf("%d %d ", antepenultimo, penultimo);
 
     for (int posicao = 3; posicao <= numero; posicao++) {
-        atual = antepenultimo + penultimo;
+        atual = antepenultimo + penultimo; // O número sempre será a soma dos dois anteriores
         printf("%d ", atual);
-        antepenultimo = penultimo;
-        penultimo = atual;
+        antepenultimo = penultimo; // Atualiza o valor de antepenúltimo
+        penultimo = atual; // Atualiza o valor de penúltimo
     }
 }
 
@@ -29,9 +29,10 @@ int main() {
     int numero;
 
     printf("Ate qual termo da sequência de Fibonacci voce quer? \n");
-    scanf("%d", &numero);
+    scanf("%d", &numero); // Lê a quantidade de termos da sequência a ser lida
 
-    Fibonacci(numero);
+    // Chamada de função
+    Fibonacci(numero); 
 
     return 0;
 }
