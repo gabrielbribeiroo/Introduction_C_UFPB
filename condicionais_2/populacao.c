@@ -21,23 +21,23 @@ int main() {
     char sexo, cor_olho, cor_cabelo;
 
     printf("Digite a idade [-1 p/ FINALIZAR]: \n");
-    scanf ("%d", &idade);
+    scanf ("%d", &idade); // Lê a idade
 
     while (idade != -1) {
         printf("Digite o sexo [M(masculino) / F(feminino)]: \n");
-        scanf(" %c", &sexo);
+        scanf(" %c", &sexo); // Lê o sexo
 
         if (sexo == 'F') {
-            qnt_tot_fem++;
+            qnt_tot_fem++; // Aumenta a quantidade de mulheres de 1 em 1
         }
 
         printf("Digite a cor dos olhos [A(azuis) / V(verdes) / C(castanhos)]: \n");
-        scanf(" %c", &cor_olho);
+        scanf(" %c", &cor_olho); // Lê a cor do olho
         printf("Digite a cor dos cabelos [L(loiros) / C(castanhos) / P(pretos)]: \n");
-        scanf(" %c", &cor_cabelo);
+        scanf(" %c", &cor_cabelo); // Lê a cor do cabelo
         
         if (idade > maior_idade) {
-            maior_idade = idade;
+            maior_idade = idade; // Atualiza a maior idade
         }
 
         if ((idade >= 18) && (idade <= 35) && (sexo == 'F') && (cor_olho == 'V') && (cor_cabelo == 'L')) {
@@ -48,7 +48,7 @@ int main() {
         scanf ("%d", &idade);
     }
 
-    percentual_fem = ((float)qnt_fem / qnt_tot_fem) * 100;
+    percentual_fem = ((float)qnt_fem / qnt_tot_fem) * 100; // Calcula a porcentagem
 
     printf("\n");
     printf("Maior idade entre os habitantes = %d. \n", maior_idade);
