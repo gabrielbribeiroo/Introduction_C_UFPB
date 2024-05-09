@@ -11,8 +11,8 @@ int main() {
     printf("Sequencia de S: 1");
 
     for (int i = 2; i <= 50; i++) {
-        s = s + (1.0/i);
-        printf(" + 1/%d", i);
+        s = s + (1.0/i); // Soma os valores da sequência
+        printf(" + 1/%d", i); 
     }
 
     printf("\n\n Valor de S = %.2f\n", s+1);
