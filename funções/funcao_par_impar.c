@@ -7,10 +7,10 @@ A função retorna 0, se o número for par, ou 1, se o número for ímpar.
 
 int ParImpar (int a) {
     if (a % 2 == 0) {
-        return 0;
+        return 0; // Número par
     }
     else {
-        return 1;
+        return 1; // Número ímpar
     }
 }
 
@@ -25,8 +25,8 @@ int main() {
     }
 
     else {
-        int tipo = ParImpar(num);
-        if (tipo == 0) {
+        int tipo = ParImpar(num); // Atribui o valor retornado da função à uma varíavel tipo
+        if (tipo == 0) { // Verifica o tipo para mostrar a mensagem
             printf("O numero %d eh PAR. \n", num);
         }
         else {
