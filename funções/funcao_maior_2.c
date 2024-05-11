@@ -6,7 +6,7 @@ Mostre o resultado.
 #include <stdio.h>
 
 int CalculaMaior (int a, int b) {
-    
+    // Verifica qual o maior número e retorna-o
     if (a > b) {
         return a;
     }
@@ -20,8 +20,9 @@ int main() {
     int num1, num2;
 
     printf("Digite dois numeros: \n");
-    scanf("%d %d", &num1, &num2);
+    scanf("%d %d", &num1, &num2); 
 
+    // Compara os valores digitados
     if (num1 == num2) {
         printf("Os numeros sao iguais. Tente novamente! \n");
     }
