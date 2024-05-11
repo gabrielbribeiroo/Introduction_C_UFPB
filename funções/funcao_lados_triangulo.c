@@ -8,16 +8,16 @@ A função deverá retornar:
 
 #include <stdio.h>
 
-int LadosTriangulo (float a, float b, float c) {
+int LadosTriangulo(float a, float b, float c) {
     if ((a == b) && (b == c)) {
-        return 0;
+        return 0; // Triângulo equilátero
     }
     else {
         if ((a == b) || (a == c) || (b == c)) {
-            return 1;
+            return 1; // Triângulo isósceles
         }
         else {
-            return 2;
+            return 2; // Triângulo escaleno
         }
     }
 }
@@ -26,10 +26,10 @@ int main() {
     float lado1, lado2, lado3;
 
     printf("Digite o comprimento dos tres lados do triangulo: \n");
-    scanf("%f %f %f", &lado1, &lado2, &lado3);
+    scanf("%f %f %f", &lado1, &lado2, &lado3); // Lê os valores dos lados do triângulo
 
-    if ((lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1)) {
-        int tipo = LadosTriangulo(lado1, lado2, lado3);
+    if ((lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1)) { // Verifica a condição de existência de um triângulo
+        int tipo = LadosTriangulo(lado1, lado2, lado3); // Chamada da função
         switch (tipo)
         {
         case 0: 
