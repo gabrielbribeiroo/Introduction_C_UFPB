@@ -9,6 +9,7 @@ Calcule o peso ideal usando a fórmula:
 
 float CalculaPesoIdeal (char sexo, float altura) {
     float peso_ideal;
+    // Verifica o sexo digitado para calcular o peso ideal
     if (sexo == 'M') {
         peso_ideal = (72.7 * altura) - 58;
     }
@@ -16,7 +17,7 @@ float CalculaPesoIdeal (char sexo, float altura) {
         peso_ideal = (62.1 * altura) - 44.7;
     }
 
-    return peso_ideal;
+    return peso_ideal; // Retorna o peso ideal
 }
 
 int main() {
@@ -24,16 +25,17 @@ int main() {
     char sexo;
 
     printf("Digite a altura: \n");
-    scanf("%f", &altura);
+    scanf("%f", &altura); // Lê a altura
     
+    // Verifica a condição de altura ser positiva
     if (altura > 0) {
         printf("Digite o sexo [M / F]: \n");
-        scanf(" %c", &sexo);
-        if ((sexo == 'M') || (sexo == 'F')) {
-            printf("Peso ideal: %.2f \n", CalculaPesoIdeal(sexo, altura));
+        scanf(" %c", &sexo); // Lê o sexo
+        if ((sexo == 'M') || (sexo == 'F')) { // Verifica se o usuário digitou os caracteres válidos
+            printf("Peso ideal: %.2f \n", CalculaPesoIdeal(sexo, altura)); // Mostra o peso ideal
         }
         else {
-            printf("Sexo invalido. Tente novamente!\n");
+            printf("Sexo invalido. Tente novamente!\n"); // Caracteres inválidos
         }
     }
 
