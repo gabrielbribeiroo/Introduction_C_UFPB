@@ -9,24 +9,24 @@ S = 1 + 1/1! + 1/2! + 1/3! + 1/N!
 
 int CalculaFatorial (int num) {
     if ((num == 0) || (num == 1)) {
-        return 1;
+        return 1; // O fatorial de 1 e 0 é 1
     }
     else {
-        return num * CalculaFatorial(num-1);
+        return num * CalculaFatorial(num-1); // Retorna o valor do fatorial
     }
 }
 
 float S (int N) {
-    float s = 1;
+    float s = 1; // Inicializa a soma por 1
 
     printf("Sequencia de S: 1");
 
     for (int i = 1; i <= N; i++) {
-        s = s + (1.0/CalculaFatorial(i));
-        printf(" + 1/%d!", i);
+        s = s + (1.0/CalculaFatorial(i)); // Soma da sequência
+        printf(" + 1/%d!", i); // Mostra a sequência
     }
 
-    return s;
+    return s; // Retorna o valor da soma
 }
 
 int main() {
@@ -35,7 +35,7 @@ int main() {
     printf("Digite um numero: \n");
     scanf("%d", &num);
 
-    printf("\n\n Valor de S = %.4f\n", S(num));
+    printf("\n\n Valor de S = %.4f\n", S(num)); // Chamada da função 
 
     return 0;
 }
