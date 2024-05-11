@@ -5,6 +5,7 @@ Atenção: use a função escrita da questão 2.
 
 #include <stdio.h>
 
+// Protótipo de funções
 int CalculaMaior (int a, int b);
 int MaiorDe3 (int a, int b, int c);
 
@@ -15,6 +16,7 @@ int main() {
     printf("Digite tres numeros: \n");
     scanf("%d %d %d", &num1, &num2, &num3);
 
+    // Compara os 3 valores digitados
     if ((num1 == num2) && (num2 == num3)) {
         printf("Os numeros sao iguais. Tente novamente! \n");
     }
@@ -26,7 +28,7 @@ int main() {
 }
 
 int CalculaMaior (int a, int b) {
-    
+    // Retorna o maior valor dos números
     if (a > b) {
         return a;
     }
@@ -37,5 +39,5 @@ int CalculaMaior (int a, int b) {
 }
 
 int MaiorDe3 (int a, int b, int c) {
-    return CalculaMaior(CalculaMaior(a, b), c);
+    return CalculaMaior(CalculaMaior(a, b), c); // Retorna o maior valor dos números
 }
