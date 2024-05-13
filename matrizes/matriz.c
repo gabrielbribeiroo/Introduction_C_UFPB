@@ -20,7 +20,7 @@ void GeraMatriz(int **m, int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50;
+            m[i][j] = rand() % 50; // Gera elementos aleatórios até 50
         }
     }
 }
@@ -32,7 +32,7 @@ void MostraMatriz(int **m, int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -44,8 +44,8 @@ void ContaZeros(int **m, int L, int C, int *zero_lin, int *zero_col) {
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
             if (m[i][j] == 0) {
-                zero_lin[i]++;
-                zero_col[j]++;
+                zero_lin[i]++; // Conta a quantidade de zeros em cada linha
+                zero_col[j]++; // Conta a quantidade de zeros em cada coluna
             }
         }
     }
@@ -56,13 +56,13 @@ void ContaPares(int **m, int L, int C, int lin_esc, int col_esc, int *par_lin, i
 
     for (j=0; j<C; j++) {
         if (m[lin_esc][j] % 2 == 0) {
-            par_lin++;
+            par_lin++; // Conta a quantidade de pares em uma determinada linha
         }
     }
 
     for (i=0; i<L; i++) {
         if (m[i][col_esc] % 2 == 0) {
-            par_col++;
+            par_col++; // Conta a quantidade de pares em uma determinada coluna
         }
     }
 }
@@ -74,10 +74,10 @@ void CalculaMedia(int **m, int L, int C, float *med_lin) {
         int soma = 0;
 
         for (j=0; j<C; j++) {
-            soma += m[i][j];
+            soma += m[i][j]; // Soma os elementos
         }
 
-        med_lin[i] = (float) soma / C;
+        med_lin[i] = (float) soma / C; // Calcula a média dos elementos de cada linha
     }
 }
 
@@ -87,8 +87,8 @@ int LinhaMaiorMedia(float *med_lin, int L) {
 
     for (i=1; i<L; i++) {
         if (med_lin[i] > maior_media) {
-            maior_media = med_lin[i];
-            linha_maior_media = i;
+            maior_media = med_lin[i]; // Atualiza o valor da maior média
+            linha_maior_media = i; // Atualiza a posição da maior média
         }
     }
 
@@ -98,11 +98,13 @@ int LinhaMaiorMedia(float *med_lin, int L) {
 int main() {
     int linhas, colunas;
 
+    // Lê a quantidade de linhas e colunas da matriz
     printf("Digite o numero de linhas da matriz:\n");
     scanf("%d", &linhas);
     printf("Digite o numero de colunas da matriz:\n");
     scanf("%d", &colunas);
 
+    // Libera as memórias alocadas
     int **N = (int **)malloc(linhas * sizeof(int *));
 
     for (int i=0; i<linhas; i++) {
@@ -115,6 +117,7 @@ int main() {
     int *qnt_pares_coluna = (int *)calloc(colunas, sizeof(int));
     float *media_linha = (float *)calloc(linhas, sizeof(float));
 
+    // Chamada de funções
     GeraMatriz(N, linhas, colunas);
     MostraMatriz(N, linhas, colunas);
     ContaZeros(N, linhas, colunas, qnt_zeros_linha, qnt_zeros_coluna);
@@ -154,6 +157,7 @@ int main() {
         free(N[i]);
     }
 
+    // Libera a memória
     free(N);
     free(qnt_zeros_linha);
     free(qnt_zeros_coluna);
