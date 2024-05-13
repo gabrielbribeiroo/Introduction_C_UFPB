@@ -13,7 +13,7 @@ void GeraMatriz(int m[][8], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 10;
+            m[i][j] = rand() % 10; // Gera elementos aleatórios até 10
         }
     }
 }
@@ -25,7 +25,7 @@ void MostraMatriz(int m[][8], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -36,8 +36,8 @@ void SomaLinha(int m[][8], int L, int C, int s[]) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            soma += m[i][j];
-            s[i] = soma;
+            soma += m[i][j]; // Calcula a soma de cada linha
+            s[i] = soma; // Forma um vetor com as somas das linhas
         }
     }
 }
@@ -48,7 +48,7 @@ void MostraFatores(int s[], int t) {
     printf("\nVetor Soma:");
 
     for (i=0; i<t; i++) {
-        printf("\nLinha %d: %4d ", i+1, s[i]);
+        printf("\nLinha %d: %4d ", i+1, s[i]); // Mostra o vetor soma
     }
 
     printf("\n");
@@ -59,7 +59,7 @@ void MultiplicaMatriz(int m[][8], int L, int C, int s[], int r[][8]) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            r[i][j] = m[i][j] * s[i];
+            r[i][j] = m[i][j] * s[i]; // Multiplica os elementos da matriz pela soma da sua linha respectiva
         }
     }
 }
@@ -72,7 +72,7 @@ void MostraMatrizResultante(int r[][8], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%7d ", r[i][j]);
+            printf("%7d ", r[i][j]); // Mostra os elementos da matriz resultante com 7 espaços
         }
         printf("\n");   
     }
@@ -83,6 +83,7 @@ void MostraMatrizResultante(int r[][8], int L, int C) {
 int main() {
     int A[8][8], S[8], R[8][8];
 
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 8, 8);
     MostraMatriz(A, 8, 8);
