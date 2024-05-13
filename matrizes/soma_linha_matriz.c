@@ -11,7 +11,7 @@ void GeraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50;
+            m[i][j] = rand() % 50; // Gera elementos aleatórios até 50
         }
     }
 }
@@ -23,7 +23,7 @@ void MostraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -36,12 +36,12 @@ void MaiorSomaLinha(int m[][3], int L, int C) {
         int soma_linha = 0;
 
         for (j=0; j<C; j++) {
-            soma_linha += m[i][j];
+            soma_linha += m[i][j]; // Soma os elementos de cada linha
         }
 
         if (soma_linha > maior_soma) {
-            maior_soma = soma_linha;
-            linha_maior_soma = i;
+            maior_soma = soma_linha; // Atualiza a maior soma de linha
+            linha_maior_soma = i; // Atualiza a posição da linha de maior soma
         }
     }
 
@@ -50,7 +50,8 @@ void MaiorSomaLinha(int m[][3], int L, int C) {
 
 int main() {
     int A[3][3];
-
+    
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 3, 3);
     MostraMatriz(A, 3, 3);
