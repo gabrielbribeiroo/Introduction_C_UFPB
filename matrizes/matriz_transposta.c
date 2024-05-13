@@ -13,7 +13,7 @@ void GeraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50;
+            m[i][j] = rand() % 50; // Gera elementos aleatórios até 50
         }
     }
 }
@@ -25,7 +25,7 @@ void MostraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -36,7 +36,7 @@ void MatrizTransposta(int m[][3], int L, int t[][3]) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<L; j++) {
-            t[i][j] = m[j][i];
+            t[i][j] = m[j][i]; // Cria uma matriz transposta
         }
     }
 }
@@ -48,7 +48,7 @@ void MostraTransposta(int t[][3], int L) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<L; j++) {
-            printf("%4d ", t[i][j]);
+            printf("%4d ", t[i][j]); // Mostra os elementos da matriz transposta com 4 espaços
         }
         printf("\n");   
     }
@@ -58,7 +58,8 @@ void MostraTransposta(int t[][3], int L) {
 
 int main() {
     int A[3][3], T[3][3];
-
+    
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 3, 3);
     MostraMatriz(A, 3, 3);
