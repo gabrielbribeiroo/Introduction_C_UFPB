@@ -11,12 +11,13 @@ Sabe-se que:
 
 int main() {
     float salario_bruto, salario_liquido;
+
     printf("Digite seu salario bruto: \n");
-    scanf("%f", &salario_bruto);
+    scanf("%f", &salario_bruto); // Lê o salário bruto
 
-    salario_liquido = (salario_bruto*1.38*1.2*0.85);
+    salario_liquido = (salario_bruto*1.38*1.2*0.85); // Calcula o salário líquido
 
-    printf("Salario liquido: %.2f\n", salario_liquido);
+    printf("Salario liquido: %.2f\n", salario_liquido); // Mostra o salário líquido
 
     return 0;
 }
