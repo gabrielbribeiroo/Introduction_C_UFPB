@@ -11,8 +11,11 @@ Faça um programa que receba um número positivo e maior que zero, calcule e mos
 
 int main () {
     float numero;
+
     printf("Digite um numero positivo e maior que 0: \n");
-    scanf("%f", &numero);
+    scanf("%f", &numero); // Lê um número
+
+    // Mostra as informações do número
     printf("Quadrado: %.2f\n", pow(numero, 2));
     printf("Cubo: %.2f\n", pow(numero, 3));
     printf("Raiz Quadrada: %.2f\n", sqrt(numero));
