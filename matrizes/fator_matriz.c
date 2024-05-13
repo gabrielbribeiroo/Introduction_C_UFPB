@@ -12,7 +12,7 @@ void GeraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50; // Gera elementos aleatórios menores que 50
+            m[i][j] = rand() % 50; // Gera elementos aleatórios até 50
         }
     }
 }
