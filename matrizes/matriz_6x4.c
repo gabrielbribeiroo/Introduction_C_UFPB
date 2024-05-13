@@ -9,14 +9,14 @@ No lugar do número 30, da segunda matriz, coloque o número zero.
 #include <stdlib.h>
 #include <time.h>
 
-#define ELEMENTO 30
+#define ELEMENTO 30 // Define uma constante para um determinado elemento
 
 void GeraMatriz(int m[][4], int L, int C) {
     int i, j;
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 100;
+            m[i][j] = rand() % 100; // Gera elementos aleatórios até 100
         }
     }
 }
@@ -28,7 +28,7 @@ void MostraMatriz(int m[][4], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -40,7 +40,7 @@ int QuantidadeMaioresElemento(int m[][4], int L, int C) {
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
             if (m[i][j] > ELEMENTO) {
-                qnt_maior++;
+                qnt_maior++; // Conta a quantidade de elementos maiores que o valor da constante
             }
         }
     }
@@ -55,7 +55,7 @@ void MatrizDiferenteElemento(int m[][4], int L, int C, int b[][4]) {
         for (j=0; j<C; j++) {
             
             if (m[i][j] == 30) {
-                b[i][j] = 0;
+                b[i][j] = 0; // Altera a matriz
             }
             else {
                 b[i][j] = m[i][j];
@@ -72,7 +72,7 @@ void MostraMatrizDiferente(int b[][4], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", b[i][j]);
+            printf("%4d ", b[i][j]); // Mostra os elementos da matriz diferente com 4 espaços
         }
         printf("\n");   
     }
@@ -83,6 +83,7 @@ void MostraMatrizDiferente(int b[][4], int L, int C) {
 int main() {
     int A[6][4], B[6][4], qnt_maiores;
 
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 6, 4);
     MostraMatriz(A, 6, 4);
