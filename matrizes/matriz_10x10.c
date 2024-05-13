@@ -15,7 +15,7 @@ void GeraMatriz(int m[][10], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 100;
+            m[i][j] = rand() % 100; // Gera elementos aleatórios até 100
         }
     }
 }
@@ -27,7 +27,7 @@ void MostraMatriz(int m[][10], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços
         }
         printf("\n");
     }
@@ -38,7 +38,7 @@ void TrocaMatriz(int m[][10], int L, int C, int r[][10]) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-
+            // Troca os elementos da matriz
             if (i == 1) {
                 r[7][j] = m[i][j];
             }
@@ -67,7 +67,7 @@ void MostraMatrizResultante(int r[][10], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", r[i][j]);
+            printf("%4d ", r[i][j]); // Mostra os elementos da matriz resultante com 7 espaços
         }
         printf("\n");   
     }
@@ -77,7 +77,8 @@ void MostraMatrizResultante(int r[][10], int L, int C) {
 
 int main() {
     int A[10][10], R[10][10];
-
+    
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 10, 10);
     MostraMatriz(A, 10, 10);
