@@ -12,7 +12,7 @@ void GeraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50;
+            m[i][j] = rand() % 50; // Gera elementos aleatórios menores que 50
         }
     }
 }
@@ -24,7 +24,7 @@ void MostraMatriz(int m[][3], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços 
         }
         printf("\n");
     }
@@ -36,7 +36,7 @@ int MenorElemento(int m[][3], int L, int C) {
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
             if (m[i][j] < menor) {
-                menor = m[i][j];
+                menor = m[i][j]; // Atualiza o valor do menor elemento
             }
         }
     }
@@ -49,7 +49,7 @@ void MultiplicaMatriz(int m[][3], int L, int men, int r[][3]) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<L; j++) {
-            r[i][j] = m[i][j] * men;
+            r[i][j] = m[i][j] * men; // Multiplica a matriz pelo menor elemento
         }
     }
 }
@@ -61,7 +61,7 @@ void MostraMatrizMultiplicada(int r[][3], int L) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<L; j++) {
-            printf("%4d ", r[i][j]);
+            printf("%4d ", r[i][j]); // Mostra os elementos da matriz multiplicada com 4 espaços 
         }
         printf("\n");   
     }
@@ -72,11 +72,12 @@ void MostraMatrizMultiplicada(int r[][3], int L) {
 int main() {
     int A[3][3], R[3][3], menor;
 
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 3, 3);
     MostraMatriz(A, 3, 3);
     
-    menor = MenorElemento(A, 3, 3);
+    menor = MenorElemento(A, 3, 3); 
 
     MultiplicaMatriz(A, 3, menor, R);
 
