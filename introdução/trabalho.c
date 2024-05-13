@@ -14,6 +14,8 @@ hora extra;
 int main() {
     int horas_trabalho, horas_extra;
     float salario_minimo, salario;
+    
+    // Lê as informações
     printf("Digite o valor do salario minimo atual: \n");
     scanf("%f", &salario_minimo);
     printf("Digite a quantidade de horas trabalhadas: \n");
@@ -21,8 +23,9 @@ int main() {
     printf("Digite a quantidade de horas extras: \n");
     scanf("%d", &horas_extra);
 
-    salario = ((horas_trabalho*0.125*salario_minimo) + (horas_extra*0.25*salario_minimo));
+    salario = ((horas_trabalho*0.125*salario_minimo) + (horas_extra*0.25*salario_minimo)); // Calcula o salário
 
-    printf("Salario a receber: %.2f\n", salario);
+    printf("Salario a receber: %.2f\n", salario); // Mostra o salário
+    
     return 0;
 }
