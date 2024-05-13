@@ -12,7 +12,7 @@ void GeraMatriz(int m[][5], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            m[i][j] = rand() % 50;
+            m[i][j] = rand() % 50; // Gera elementos aleatórios menores que 50
         }
     }
 }
@@ -22,7 +22,7 @@ void MostraMatriz(int m[][5], int L, int C) {
 
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
-            printf("%4d ", m[i][j]);
+            printf("%4d ", m[i][j]); // Mostra os elementos da matriz com 4 espaços 
         }
         printf("\n");
     }
@@ -34,9 +34,9 @@ int MaiorElemento(int m[][5], int L, int C, int *X, int *Y) {
     for (i=0; i<L; i++) {
         for (j=0; j<C; j++) {
             if (m[i][j] > maior) {
-                maior = m[i][j];
-                *X = i;
-                *Y = j;
+                maior = m[i][j]; // Atualiza o valor do maior elemento
+                *X = i; // Linha do maior elemento
+                *Y = j; // Coluna do maior elemento
             }
         }
     }
@@ -47,6 +47,7 @@ int MaiorElemento(int m[][5], int L, int C, int *X, int *Y) {
 int main() {
     int A[4][5], maior, linha_maior, coluna_maior;
 
+    // Chamada de funções
     srand(time(NULL));
     GeraMatriz(A, 4, 5);
     MostraMatriz(A, 4, 5);
@@ -56,7 +57,7 @@ int main() {
     printf("Maior elemento = %d\n"
             "Linha: %d\n"
             "Coluna: %d\n",
-            maior, linha_maior+1, coluna_maior+1);
+            maior, linha_maior+1, coluna_maior+1); // Mostra o valor e a posição do maior elemento da matriz
 
     return 0;
 }
