@@ -4,12 +4,14 @@ int main() {
     int num1, num2, num3, num4;
 
     printf("Digite 3 numeros [EM ORDEM CRESCENTE]: \n");
-    scanf("%d %d %d", &num1, &num2, &num3);
+    scanf("%d %d %d", &num1, &num2, &num3); // Lê 3 números em ordem crescente
 
+    // Verifica a ordenação dos 3 valores
     if ((num1 < num2) && (num2 < num3)) {
         printf("Digite outro numero: \n");
         scanf("%d", &num4);
 
+        // Ordena os 4 valores e mostra-os em ordem decrescente
         if (num4 > num3) {
             printf("%d > %d > %d > %d\n", num4, num3, num2, num1);
         }
