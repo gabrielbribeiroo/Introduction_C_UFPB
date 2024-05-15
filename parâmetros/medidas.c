@@ -9,7 +9,7 @@ Por exemplo, se forem fornecidos os valores 5 pés e 10 polegadas, a função de
 #include <stdio.h>
 
 double metros(int pes, int polegadas, double *m) {
-    *m = (pes * 0.3048) + (polegadas * 0.0254);
+    *m = (pes * 0.3048) + (polegadas * 0.0254); // Conversão do valor para metros
     return *m;
 }
 
@@ -22,7 +22,7 @@ int main() {
     printf("Digite a altura em polegadas:\n");
     scanf("%d", &altura_polegadas);
 
-    printf("Altura [em metros(m)]: %.3f\n", metros(altura_pes, altura_polegadas, &altura_metros));
+    printf("Altura [em metros(m)]: %.3f\n", metros(altura_pes, altura_polegadas, &altura_metros)); // Chamada da função
 
     return 0;
 }
