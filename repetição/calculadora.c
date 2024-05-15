@@ -17,9 +17,9 @@ int main(void){
     printf("  [3] DIVISAO \n");
     printf("  [4] MULTIPLICACAO \n");
     printf("Selecione a operacao que voce deseja realizar: \n");
-    scanf("%d", &escolha);
+    scanf("%d", &escolha); // Lê a operação desejada
 
-    switch (escolha){
+    switch (escolha){ // Faz a operação de acordo com o valor digitado
         case 1:
             printf("VOCE ESCOLHEU A OPCAO DE ADICAO... \n");
             printf("Digite dois valores: \n");
