@@ -7,8 +7,11 @@ Considere que o usuário não informará valores iguais.
 
 int main () {
     float num1, num2, num3, maior, maior_2;
+
     printf("Digite tres valores: \n");
-    scanf("%f %f %f", &num1, &num2, &num3);
+    scanf("%f %f %f", &num1, &num2, &num3); // Lê 3 números
+
+    // Verifica a ordenção dos 3 números, atualizando os maiores
     if (num1>num2 && num2>num3) {
         maior = num1;
         maior_2 = num2;
@@ -42,7 +45,7 @@ int main () {
         }
     }
 
-    printf("\nSoma dos maiores valores: %.2f + %.2f = %.2f \n", maior, maior_2, maior+maior_2);
+    printf("\nSoma dos maiores valores: %.2f + %.2f = %.2f \n", maior, maior_2, maior+maior_2); // Mostra a soma dos 2 maiores
 
     return 0;
 }
