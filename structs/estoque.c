@@ -10,16 +10,17 @@ Depois da leitura dos dados de entrada, o programa deverá:
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 3
+#define MAX 10 // Define uma constante MAX de valor 10 que representa a quantidade de produtos lidos
 
 typedef struct {
     int codigo, valor, quantidade;
     char descricao[50];
-}produto;
+}produto; // Declaração da estrutura produto
 
 void LerProduto(produto p[]) {
     printf("CADASTRO DOS PRODUTOS\n");
 
+    // Leitura das informações dos produtos
     for (int i=0; i<MAX; i++) {
         printf("\nCodigo do produto: ");
         scanf("%d%*c", &p[i].codigo);
@@ -49,7 +50,8 @@ void AlterarProduto(produto p[], int codigo) {
             if (p[i].descricao[strlen(p[i].descricao) - 1] == '\n') {
                 p[i].descricao[strlen(p[i].descricao) - 1] = '\0';
             }
-
+            
+            // Mostra o produto alterado
             printf("Novo valor: ");
             scanf("%d%*c", &p[i].valor);
             printf("Nova quantidade: ");
@@ -65,7 +67,7 @@ void ProdutosComDescricao(produto p[], char letra) {
     printf("Produtos com descricao iniciada por '%c':\n", letra);
     
     for (int i=0; i<MAX; i++) {
-        if (p[i].descricao[0] == letra) {
+        if (p[i].descricao[0] == letra) { // Verifica o primeiro caractere da descrição
             printf("Codigo: %d\n", p[i].codigo);
             printf("Descricao: %s\n", p[i].descricao);
             printf("Valor: %d\n", p[i].valor);
@@ -79,7 +81,7 @@ void ProdutosComEstoqueBaixo(produto p[]) {
     printf("Produtos com estoque inferior a 5 unidades:\n");
 
     for (int i=0; i<MAX; i++) {
-        if (p[i].quantidade < 5) {
+        if (p[i].quantidade < 5) { // Verifica a quantidade do produto no estoque
             printf("Codigo: %d\n", p[i].codigo);
             printf("Descricao: %s\n", p[i].descricao);
             printf("Valor: %d\n", p[i].valor);
@@ -90,10 +92,11 @@ void ProdutosComEstoqueBaixo(produto p[]) {
 }
 
 int main() {
-    produto p[MAX];
+    produto p[MAX]; // Array p do tipo produto (struct)
     char letra;
     int codigo;
 
+    // Chamada de funções
     LerProduto(p);
 
     printf("\nDigite o codigo do produto que deseja alterar: ");
