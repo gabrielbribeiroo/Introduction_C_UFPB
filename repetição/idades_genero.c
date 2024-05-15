@@ -9,10 +9,14 @@ e o produto das idades do homem mais novo com a mulher mais velha.
 
 int main() {
     int masc_1, masc_2, fem_1, fem_2, masc_velho, masc_novo, fem_velha, fem_nova;
+    
+    // Leitura das idades
     printf("Digite as idades de dois homens: \n");
     scanf("%d %d", &masc_1, &masc_2);
     printf("Digite as idades de duas mulheres: \n");
     scanf("%d %d", &fem_1, &fem_2);
+
+    // Verificação das idades
     if (masc_1>masc_2 && fem_1>fem_2) {
         masc_velho = masc_1;
         masc_novo = masc_2;
