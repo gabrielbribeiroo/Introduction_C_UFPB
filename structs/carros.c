@@ -12,13 +12,13 @@ Crie um menu para:
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 20
+#define MAX 20 // Define uma constante MAX de valor 20 que representa a quantidade de carros lidos
 
 typedef struct {
     int ano;
     float preco;
     char marca[20], cor[20];
-}carro;
+}carro; // Declaração da estrutura carro
 
 void LerCarro(carro c[]) {
     int opcao;
@@ -31,35 +31,36 @@ void LerCarro(carro c[]) {
         printf("4. Verificar existencia de carro por caracteristicas\n");
         printf("0. Sair\n");
         printf("Escolha uma opcao: ");
-        scanf("%d", &opcao);
+        scanf("%d", &opcao); // Lê a opção
 
+        // Realiza a ação, de acordo com a escolha
         switch (opcao) {
-            case 1: {
-                getchar();
+            case 1: { 
+                getchar(); // Limpa o buffer
                 for (int i=0; i<MAX; i++) {
                     printf("\nMarca do carro: ");
-                    fgets(c[i].marca, 20, stdin);
+                    fgets(c[i].marca, 20, stdin); // Lê a marca do carro
                     if (c[i].marca[strlen(c[i].marca) - 1] == '\n') {
                         c[i].marca[strlen(c[i].marca) - 1] = '\0';
-                    }
+                    } // Retira o último \n
                     printf("Ano do carro: ");
-                    scanf("%d%*c", &c[i].ano);
+                    scanf("%d%*c", &c[i].ano); // Lê o ano do carro
                     printf("Cor do carro: ");
-                    getchar();
-                    fgets(c[i].cor, 20, stdin);
+                    getchar(); // Limpa o buffer
+                    fgets(c[i].cor, 20, stdin); // Lê a cor do carro
                     if (c[i].cor[strlen(c[i].cor) - 1] == '\n') {
                         c[i].cor[strlen(c[i].cor) - 1] = '\0';
-                    }
+                    } // Retira o último \n
                     printf("Preco do carro: ");
-                    scanf("%f%*c", &c[i].preco);
+                    scanf("%f%*c", &c[i].preco); // Lê o preço do carro
                 }
                 break;
             }
             case 2: {
                 float preco;
                 printf("\nDigite o preco: ");
-                scanf("%f", &preco);
-                getchar();
+                scanf("%f", &preco); // Lê o preço do carro
+                getchar(); // Limpa o buffer
                 printf("Carros com valor inferior ou equivalente ao digitado: \n");
                 for (int i=0; i<MAX; i++) {
                     if (c[i].preco <= preco) {                       
@@ -73,10 +74,10 @@ void LerCarro(carro c[]) {
             case 3: {
                 char marca[20];
                 printf("\nDigite a marca: ");
-                scanf("%s", marca);
-                getchar();
+                scanf("%s", marca); // Lê a marca do carro
+                getchar(); // Limpa o buffer
                 for (int i=0; i<MAX; i++) {
-                    if (strcmp(c[i].marca, marca) == 0) {
+                    if (strcmp(c[i].marca, marca) == 0) { // Compara a marcas digitadas com a escolhida
                         printf("Preco: %.2f\n", c[i].preco);
                         printf("Ano: %d\n", c[i].ano);
                         printf("Cor: %s\n", c[i].cor);
@@ -88,6 +89,7 @@ void LerCarro(carro c[]) {
                 char marca[20], cor[20];
                 int ano, encontrado = 0;
                 printf("\nDigite as informacoes abaixo do carro que procura.\n");
+                // Lê as informações do carro que procura
                 printf("Marca: ");
                 scanf("%s", marca);
                 getchar();
@@ -97,7 +99,7 @@ void LerCarro(carro c[]) {
                 printf("Cor: ");
                 scanf("%s", cor);
                 for (int i=0; i<MAX; i++) {
-                    if ((strcmp(c[i].marca, marca) == 0) && (c[i].ano == ano) && (strcmp(c[i].cor, cor) == 0)) {
+                    if ((strcmp(c[i].marca, marca) == 0) && (c[i].ano == ano) && (strcmp(c[i].cor, cor) == 0)) { // Compara as informações
                         encontrado = 1;
                         printf("Existem carros com essas caracteristicas:\n");
                         printf("Preco: %.2f\n", c[i].preco);
@@ -120,9 +122,9 @@ void LerCarro(carro c[]) {
 }
 
 int main() {
-    carro c[MAX];
+    carro c[MAX]; // Array c do tipo carro (struct)
 
-    LerCarro(c);
+    LerCarro(c); // Chamada de função
     
     return 0;
 }
