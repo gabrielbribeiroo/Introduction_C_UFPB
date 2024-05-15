@@ -15,13 +15,13 @@ Faça uma função que receba como parâmetro um inteiro no intervalo de 1 a 9, 
 #include <stdio.h>
 
 void TabelaMultiplicacao(int *n) {
-    if ((*n < 1) || (*n > 9)) {
+    if ((*n < 1) || (*n > 9)) { // Verifica se o número está entre 1 e 9
         printf("Numero fora do intervalo. Tente novamente!\n");
     }
     for (int i=1; i<=*n; i++) {
         for (int j=1; j<=i; j++) {
             int produto =  i * j;
-            printf("%d\t", produto);    
+            printf("%d\t", produto); // Printa os valores dos produtos como uma tabuada
         }
         printf("\n");
     }
@@ -29,10 +29,11 @@ void TabelaMultiplicacao(int *n) {
 
 int main() {
     int num;
-    printf("Digite o numero de linhas da tabela:\n");
-    scanf("%d", &num);
 
-    TabelaMultiplicacao(&num);
+    printf("Digite o numero de linhas da tabela:\n");
+    scanf("%d", &num); // Lê o número de linhas
+
+    TabelaMultiplicacao(&num); // Chamada da função
 
     return 0;
 }
