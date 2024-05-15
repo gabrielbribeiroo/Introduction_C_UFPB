@@ -24,17 +24,18 @@ h) Sair do programa.
 
 #include <stdio.h>
 
-#define MAX 200
+#define MAX 200 // Define uma constante MAX de valor 200 que representa a quantidade de gados lidos
 
 typedef struct {
     int codigo, idade;
     float leite, alimento;
     char abate;
-}gado;
+}gado; // Declaração de estrutura gado
 
 void LerGado(gado g[]) {
     printf("Digite os dados de cada cabeca de gado.\n");
 
+    // Lê as informações dos gados
     for (int i=0; i<MAX; i++) {
         printf("\nCabeca de Gado %d:\n", i+1);
         printf("Codigo: ");
@@ -59,14 +60,15 @@ void CalcularTotais(gado g[], char opcao) {
         tot_alimento += g[i].alimento;
         if ((g[i].idade > 5) || (g[i].leite < 40) || (g[i].leite>=50 && g[i].leite<=70 && g[i].alimento>50)) {
             g[i].abate = 'S';
-            gado_abate++;
+            gado_abate++; // Calcula o total que vai para o abate
         }
         if (g[i].abate == 'N') {
-            leite_pos_abate += g[i].leite;
-            alimento_pos_abate += g[i].alimento;
+            leite_pos_abate += g[i].leite; // Soma a quantidade de leite após o abate
+            alimento_pos_abate += g[i].alimento; // Soma a quantidade de alimento após o abate
         }
     }
 
+    // Mostra a informação, de acordo com a opção escolhida
     switch (opcao) {
     case 'c':
         printf("\nQuantidade total de leite produzida por semana: %.2f litros.\n", tot_leite);
@@ -89,10 +91,10 @@ void CalcularTotais(gado g[], char opcao) {
 }
 
 int main() {
-    gado g[MAX];
+    gado g[MAX]; // Array g do tipo gado (struct)
     char opcao;
 
-    LerGado(g);
+    LerGado(g); // Chamada de função
 
     do {
         printf("\nMENU DE OPCOES\n");
@@ -103,12 +105,12 @@ int main() {
         printf("g) Calcular e mostrar a quantidade de cabecas de gado que irao para o abate\n");
         printf("h) Sair do programa\n");
         printf("Escolha uma opcao: ");
-        scanf(" %c", &opcao);       
+        scanf(" %c", &opcao); // Lê a opção
 
         if (opcao != 'h') {
-            CalcularTotais(g, opcao);
+            CalcularTotais(g, opcao); // Chamada de função
         }
-    } while (opcao != 'h');
+    } while (opcao != 'h'); // Enquanto a opção for diferente de h
 
     return 0;
 }
