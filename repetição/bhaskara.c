@@ -13,10 +13,14 @@ Para esse discriminante, há três possíveis situações:
 
 int main() {
     float a, b, c, x1, x2, delta;
+
     printf("Digite os valores dos tres coeficientes da equacao: \n");
-    scanf("%f %f %f", &a, &b, &c);
-    delta = pow(b,2) - 4*a*c;
-    if (delta < 0){
+    scanf("%f %f %f", &a, &b, &c); // Lê os coeficientes da equação
+
+    delta = pow(b,2) - 4*a*c; // Calcula o delta
+
+    // Verificação do valor do delta e das raízes
+    if (delta < 0){ 
         printf("Nao tem solucao real. \n");
     } 
     else {
@@ -25,6 +29,7 @@ int main() {
             printf("Tem solucao igual a %.2f \n", x1);
         }
         else {
+            // Cálcula das raízes 
             x1 = (-b + sqrt(delta)) / (2*a);
             x2 = (-b - sqrt(delta)) / (2*a);
             printf("Tem duas solucoes reais e diferentes. \n");
