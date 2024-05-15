@@ -25,8 +25,10 @@ int main() {
     printf("|[3]------C--------|--1.0-|\n");
     printf("Selecione a classe do consumidor: \n");
     scanf("%d", &classe); // Lê a classe consumidora
-    switch (classe) { // Executa o cálculo para classe digitada
-        case 1:
+
+    // Executa o cálculo para classe digitada
+    switch (classe) { 
+        case 1: // Classe A
             printf("Qual o consumo, em kwh, do consumidor no mes? \n");
             scanf("%f", &consumo);
             valor_fornecimento = consumo*0.5;
@@ -37,7 +39,7 @@ int main() {
             printf("Valor do ICMS: %.2f reais. \n", icms);
             break;
         
-        case 2:
+        case 2: // Classe B
             printf("Qual o consumo, em kwh, do consumidor no mes? \n");
             scanf("%f", &consumo);
             valor_fornecimento = consumo*0.8;
@@ -48,7 +50,7 @@ int main() {
             printf("Valor do ICMS: %.2f reais. \n", icms);
             break;
 
-        case 3:
+        case 3: // Classe C
             printf("Qual o consumo, em kwh, do consumidor no mes? \n");
             scanf("%f", &consumo);
             valor_fornecimento = consumo;
@@ -59,7 +61,7 @@ int main() {
             printf("Valor do ICMS: %.2f reais. \n", icms);
             break;
 
-        default:
+        default: // Padrõ/nenhuma
             printf("OPCAO INVALIDA. TENTE NOVAMENTE! \n");
     }
     return 0;
