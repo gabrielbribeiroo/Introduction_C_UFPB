@@ -24,8 +24,8 @@ int main() {
     printf("|[2]------B--------|--0.8-|\n");
     printf("|[3]------C--------|--1.0-|\n");
     printf("Selecione a classe do consumidor: \n");
-    scanf("%d", &classe);
-    switch (classe) {
+    scanf("%d", &classe); // Lê a classe consumidora
+    switch (classe) { // Executa o cálculo para classe digitada
         case 1:
             printf("Qual o consumo, em kwh, do consumidor no mes? \n");
             scanf("%f", &consumo);
