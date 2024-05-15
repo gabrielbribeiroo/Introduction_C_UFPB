@@ -11,7 +11,7 @@ void MostraSequencia(int n) {
     printf("Sequencia: ");
     
     for (int i=1; i<=n; i++) {
-        printf("%.f/%d", pow(i,2)+1, i+3);
+        printf("%.f/%d", pow(i,2)+1, i+3); // Mostra a sequência
         if (i < n) {
             printf(" + ");
         }
@@ -19,10 +19,10 @@ void MostraSequencia(int n) {
 }
 
 float CalculaSequencia(int n) {
-    float s = 0;
+    float s = 0; // Inicializa a soma com 0
 
     for (int i=1; i<=n; i++) {
-        s = s + ((pow(i,2) + 1) / ((i+3)));
+        s = s + ((pow(i,2) + 1) / ((i+3))); // Calcula o valor da soma dos valores da sequência
     }
 
     return s;
@@ -33,12 +33,12 @@ int main() {
 
     do {
         printf("Digite um valor [MAIOR QUE 0]: \n");
-        scanf("%d", &num);
-    }while(num <= 0);
+        scanf("%d", &num); // Lê um número
+    }while(num <= 0); // Enquanto ele for menor ou igual a 0
 
-    MostraSequencia(num);
+    MostraSequencia(num); // Chamada de função
 
-    printf("\n\nSoma = %.3f", CalculaSequencia(num));
+    printf("\n\nSoma = %.3f", CalculaSequencia(num)); // Mostra o valor da soma
 
     return 0;
 }
