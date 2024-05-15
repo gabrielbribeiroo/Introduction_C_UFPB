@@ -14,17 +14,20 @@ Portanto, todo triângulo equilátero é também isósceles.
 
 int main() {
     float x, y, z;
+
     printf("Digite tres valores: \n");
-    scanf("%f %f %f", &x, &y, &z);
+    scanf("%f %f %f", &x, &y, &z); // Lê três valores
+
+    // Verifica a condição de existência de um triângulo
     if (x+y>z && x+z>y && y+z>x) {
-        if (x==y && x==z){
+        if (x==y && x==z){ // 3 lados iguais (equilátero)
             printf("Eh um triangulo equilatero. \n");
         }
         else {
-            if (x==y || y==z || x==z) {
+            if (x==y || y==z || x==z) { // 2 lados iguais (isósceles)
                 printf("Eh um triangulo isosceles. \n");
             }
-            else {
+            else { // Lados diferentes (escaleno)
                 printf("Eh um triangulo escaleno. \n");
             }
         }
@@ -32,5 +35,6 @@ int main() {
     else {
         printf("As medidas nao formam um triangulo! \n");
     }
+    
     return 0;
 }
