@@ -9,7 +9,8 @@ Caso sejam passados valores iguais, a ordem da resposta entre eles não importa.
 
 void MaiorMenor(int *A, int *B) {
     int aux;
-
+    
+    // Atualiza a ordenação dos números
     if (*A > *B) {
         aux = *A;
         *A = *B;
@@ -23,10 +24,10 @@ int main() {
     printf("Digite dois numeros: \n");
     scanf("%d %d", &a, &b);
 
-    MaiorMenor(&a, &b);
+    MaiorMenor(&a, &b); // Chamada de função
 
     printf("Maior = %d\n"
-           "Menor = %d\n", b, a);
+           "Menor = %d\n", b, a); // Mostra os valores em ordem decrescente
 
     return 0;
 }
