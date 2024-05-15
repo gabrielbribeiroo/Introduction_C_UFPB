@@ -10,7 +10,7 @@ e retorna a distância entre os pontos.
 #include <math.h>
 
 double distancia(int x1, int y1, int x2, int y2, double *d) {
-    *d = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2));
+    *d = sqrt(pow(x2-x1, 2) + pow(y2-y1, 2)); // Calcula a distância entre dois pontos
     return *d;
 }
 
@@ -18,14 +18,15 @@ int main() {
     int x1, x2, y1, y2;
     double dist;
 
+    // Leitura das coordenadas
     printf("Digite as coordenadas do primeiro ponto [(X,Y)]:\n");
     scanf("%d\t%d", &x1, &y1);
     printf("Digite as coordenadas do segundo ponto [(X,Y)]:\n");
     scanf("%d\t%d", &x2, &y2);
 
-    dist = distancia(x1, y1, x2, y2, &dist);
+    dist = distancia(x1, y1, x2, y2, &dist); // Chamada da função
 
-    printf("A distancia entre os pontos (%d,%d) e (%d,%d) eh: %.2f\n", x1, y1, x2, y2, dist);
+    printf("A distancia entre os pontos (%d,%d) e (%d,%d) eh: %.2f\n", x1, y1, x2, y2, dist); // Mostra a distância
 
     return 0;
 }
