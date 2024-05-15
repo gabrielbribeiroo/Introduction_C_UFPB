@@ -23,8 +23,8 @@ int main() {
     printf("|--[4]-|Gerente----|10(por cento)|\n");
     printf("|--[5]-|Diretor----|-------------|\n");
     printf("Selecione o cargo do funcionario: \n");
-    scanf("%d", &cargo);
-    switch (cargo) {
+    scanf("%d", &cargo); // Lê o cargo do funcionário
+    switch (cargo) { // Calcula o salário para o cargo digitado
     case 1:
         printf("Qual o salario do funcionario? \n");
         scanf("%f", &salario_atual);
