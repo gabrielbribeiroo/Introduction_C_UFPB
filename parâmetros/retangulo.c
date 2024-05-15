@@ -8,22 +8,22 @@ Escreva uma função chamada medidasDoRetangulo que recebeos parâmetros b e h
 #include <stdio.h>
 
 void MedidasDoRetangulo(float b, float h, float *a, float *p) {
-    *a = b * h;
-    *p = 2 * (b + h);
+    *a = b * h; // Calcula a área
+    *p = 2 * (b + h); // Calcula o perímetro
 }
 
 int main() {
     float base, altura, area, perimetro;
 
     printf("Digite a base do retangulo [EM CENTIMETROS(cm)]: \n");
-    scanf("%f", &base);
+    scanf("%f", &base); // Lê o valor da base em cm
     printf("Digite a altura do retangulo [EM CENTIMETROS(cm)]: \n");
-    scanf("%f", &altura);
+    scanf("%f", &altura); // Lê o valor da altura em cm
 
-    MedidasDoRetangulo(base, altura, &area, &perimetro);
+    MedidasDoRetangulo(base, altura, &area, &perimetro); // Chamada de função
 
     printf("Area = %.2f\n"
-           "Perimetro = %.2f\n", area, perimetro);
+           "Perimetro = %.2f\n", area, perimetro); // Mostra a área e o perímetro
 
     return 0;
 }
