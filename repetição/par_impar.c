@@ -7,8 +7,11 @@ Escrever se o número é par ou é ímpar.
 
 int main() {
     int numero;
+
     printf("Digite um numero: \n");
-    scanf("%d", &numero);
+    scanf("%d", &numero); // Lê um número
+
+    // Verifica se um número é par ou ímpar
     if (numero % 2 == 0){
         printf("O numero %d eh PAR. \n", numero);
     }
