@@ -8,8 +8,8 @@ retorna o dígito das centenas em n.
 #include <stdio.h>
 
 int centena(int *n) {
-    int c = (*n / 100) % 10;
-    return c;
+    int c = (*n / 100) % 10; // Calcula a centena do número
+    return c; // Retorna o algarismo da centena
 }
 
 
@@ -19,13 +19,13 @@ int main() {
     printf("Digite um numero [0 PARA ENCERRAR]:\n");
 
     do{
-        scanf("%d", &num);
+        scanf("%d", &num); // Lê um número
         if (num == 0) {
-            break;
+            break; // Para se ele for 0
         }
-        printf("O digito das centenas de %d eh: %d\n", num, centena(&num));
+        printf("O digito das centenas de %d eh: %d\n", num, centena(&num)); // Chamada de função
         printf("Digite outro numero [0 PARA ENCERRAR]:\n");
-    }while(num!=0);
+    }while(num!=0); // enquanto ele for diferente de 0
     
     return 0;
 }
