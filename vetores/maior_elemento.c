@@ -5,14 +5,14 @@ Mostrar o maior elemento do vetor V e a sua posição.
 
 #include <stdio.h>
 
-#define TAM 20
+#define TAM 20 // Define uma constante TAM de valor 20 que representa o tamanho do vetor
 
 void LeVetor(int v[], int t) {
     printf("Digite os elementos do vetor:\n");
 
     for (int i=0; i<t; i++) {
         printf("V[%d] = ", i);
-        scanf("%d", &v[i]);
+        scanf("%d", &v[i]); // Leitura dos elementos de cada posição do vetor
     }
 }
 
@@ -21,9 +21,10 @@ void MaiorElemento(int v[], int t, int *maior, int *idx_maior) {
     *idx_maior = 0;
 
     for (int i=0; i<t; i++) {
+        // Verifica o maior elemento do vetor
         if (v[i] > *maior) {
-            *maior = v[i];
-            *idx_maior = i;
+            *maior = v[i]; // Atualiza o maior elemento
+            *idx_maior = i; // Posição do maior elemento
         }
     }
 }
@@ -31,6 +32,7 @@ void MaiorElemento(int v[], int t, int *maior, int *idx_maior) {
 int main() {
     int vetor[TAM], maior_elemento, posicao;
 
+    // Chamada das funções
     LeVetor(vetor, TAM);
     MaiorElemento(vetor, TAM, &maior_elemento, &posicao);
 
