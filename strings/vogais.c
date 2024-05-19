@@ -10,15 +10,16 @@ Saída: ** *st** n* *sc*l*
 
 int ContarVogais(const char *str) {
     int i, cont = 0; 
-    char vogais[] = "aeiouAEIOU";
+    char vogais[] = "aeiouAEIOU"; // Vetor com todas as vogais
 
     for (i=0; str[i]!='\0'; i++) {
+        // Verifica se tem alguma vogal presente na string
         if (strchr(vogais, str[i]) != NULL) {
-            cont++;
+            cont++; // Conta a recorrência de vogais
         }
     }
-
-    return cont;
+ 
+    return cont; // Retorna a quantidade vogais
 }
 
 void CriptografarVogais(char *str) {
@@ -27,7 +28,7 @@ void CriptografarVogais(char *str) {
 
     for (i=0; str[i]!='\0'; i++) {
         if (strchr(vogais, str[i]) != NULL) {
-            str[i] = '*';
+            str[i] = '*'; // Troca as vogais da string por *
         }
     }
 }
@@ -36,12 +37,11 @@ int main() {
     char frase[101];
 
     printf("Digite uma frase: [MAXIMO DE 100 CARACTERES]\n");
-    fgets(frase, 101, stdin);
+    fgets(frase, 101, stdin); // Leitura da string
 
+    // Chamada das funções
     printf("Numero de vogais na frase: %d\n", ContarVogais(frase));
-
     CriptografarVogais(frase);
-    
     printf("Frase criptografada: %s\n", frase);
 
     return 0;
