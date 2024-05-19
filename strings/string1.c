@@ -15,18 +15,19 @@ void EncontrarOcorrencias(const char *str, char c, int *ocorrencias) {
     int i, j = 0, t = strlen(str);
 
     for (i=0; i<t; i++) {
+        // Verifica se o caractere da string é igual ao digitado
         if (str[i] == c) {
-            ocorrencias[j++] = i;
+            ocorrencias[j++] = i; // Conta a quantidade de recorrências
         }
     }
 
-    ocorrencias[j] = -1;
+    ocorrencias[j] = -1; // Encerra o vetor ocorrencias com -1
 }
 
 void MostrarVetorOC(const char *str, char c, int *ocorrencias) {
     printf("Vetor de ocorrencias do caractere %c na string %s: \n{", c, str);
     for (int i=0; ocorrencias[i] != -1; i++) {
-        printf("%d ", ocorrencias[i]);
+        printf("%d ", ocorrencias[i]); // Mostra as posições do caractere digitado na string
     }
     printf("-1}\n");
 }
@@ -36,13 +37,15 @@ int main() {
     int ocorrencias[TAM];
 
     printf("Digite uma frase: [MAXIMO DE %d CARACTERES]\n", TAM);
-    fgets(frase, sizeof(frase), stdin);
-    frase[strcspn(frase, "\n")] = '\0'; 
+    fgets(frase, sizeof(frase), stdin); // Leitura da string
+    frase[strcspn(frase, "\n")] = '\0'; // Substitui o \n da string pelo \0 (encerramento)
 
     printf("Digite um caractere:\n");
-    letra = getchar();
+    letra = getchar(); // Leitura do caractere
     
+    // Chamada das funções
     EncontrarOcorrencias(frase, letra, ocorrencias);
     MostrarVetorOC(frase, letra, ocorrencias);
+    
     return 0;
 }
