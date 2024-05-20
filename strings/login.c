@@ -11,7 +11,7 @@ Nome: Olívia Silva Santos Marques   >>          Login: OSSMossm
 #include <string.h>
 #include <ctype.h>
 
-#define TAM 101 // Define uma constante TAM de valor 100 que representa o tamanho da string
+#define TAM 101 // Define uma constante TAM de valor 101 que representa o tamanho da string
 
 void GerarLogin(const char *n, char *l) {
     int i, j = 0, t = strlen(n);
