@@ -9,7 +9,7 @@ Caso, não exista nenhuma ocorrência, deve ser armazenado o valor -1 no vetor.
 #include <stdio.h>
 #include <string.h>
 
-#define TAM 100
+#define TAM 100 // Define uma constante TAM de valor 100 que representa o tamanho da string
 
 void EncontrarOcorrencias(const char *str, char c, int *ocorrencias) {
     int i, j = 0, t = strlen(str);
