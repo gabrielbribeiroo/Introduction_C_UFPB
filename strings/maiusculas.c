@@ -14,31 +14,33 @@ Texto convertido: PREZADOS ALUNOS DE IP (2023.2)
 #include <string.h>
 #include <ctype.h>
 
-#define TAM 101
+#define TAM 101 // Define uma constante TAM de valor 101 que representa o tamanho da string
 
 void LerString(char *texto) {
     printf("Digite um texto [MAXIMO DE %d caracteres]:\n", TAM-1);
-    fgets(texto, TAM, stdin);
-    texto[strcspn(texto, "\n")] = '\0';
+    fgets(texto, TAM, stdin); // Leitura da string
+    texto[strcspn(texto, "\n")] = '\0'; // Substitui o \n da string pelo \0 (encerramento)
 }
 
 void ConverterParaMaiusculas(char *texto) {
     int i = 0;
     while (texto[i] != '\0') {
+        // Verifica se o caractere é minúsculo
         if (islower(texto[i])) {
-            texto[i] = toupper(texto[i]);
+            texto[i] = toupper(texto[i]); // Transforma o caractere para maiúsculo
         }
         i++;
     }
 }
 
 void MostrarString(char *texto) {
-    printf("Texto convertido para letras maiusculas: %s\n", texto);
+    printf("Texto convertido para letras maiusculas: %s\n", texto); // Mostra a string
 }
 
 int main() {
     char texto[TAM];
 
+    // Chamada das funções
     LerString(texto);
     ConverterParaMaiusculas(texto);
     MostrarString(texto);
