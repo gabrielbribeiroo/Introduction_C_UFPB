@@ -6,7 +6,7 @@ Imprima a string resultante.
 #include <stdio.h>
 #include <string.h>
 
-#define TAM 51 // Define uma constante TAM de valor 51 que representa os tamanhos das strings
+#define TAM 51 // Define uma constante TAM de valor 51 que representa o tamanho da string
 
 void LerPalavra(char *palavra) {
     printf("Digite uma palavra [MAXIMO DE %d caracteres]:\n", TAM-1);
