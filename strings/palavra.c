@@ -13,23 +13,25 @@ int EhPalindromo(const char *str) {
     int fim = strlen(str) - 1;
 
     while (inicio < fim) {
+        // Verifica os caracteres do início e do fim
         if (tolower(str[inicio]) != tolower(str[fim])) {
-            return 0;
+            return 0; // Não é palíndromo
         }
         inicio++;
         fim--;
     }
 
-    return 1;
+    return 1; // É palíndromo
 }
 
 int main() {
-    char palavra[21];
+    char palavra[21]; 
 
     printf("Digite uma palavra: [MAXIMO DE 20 CARACTERES]\n");
-    fgets(palavra, sizeof(palavra), stdin);
-    palavra[strcspn(palavra, "\n")] = '\0';
+    fgets(palavra, sizeof(palavra), stdin); // Leitura da string
+    palavra[strcspn(palavra, "\n")] = '\0'; // Substitui o \n da string pelo \0 (encerramento)
 
+    // Verifica se é palíndromo ou não
     if (EhPalindromo(palavra)) {
         printf("A palavra %s eh um palindromo.\n", palavra);
     }
