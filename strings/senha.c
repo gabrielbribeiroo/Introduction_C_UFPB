@@ -7,17 +7,18 @@ Informar também o número de tentativas do usuário.
 #include <stdio.h>
 #include <string.h>
 
-#define TAM 6
+#define TAM 6 // Define uma constante TAM de valor 6 que representa o tamanho da string
 
 int VerificaSenha(const char *str, int *c) {
-    (*c)++;
+    (*c)++; // Contador de tentativas
 
+    // Compara a string digitada com a senha "teste" (correta)
     if (strcmp(str, "teste") == 0) {
-        printf("Acesso permitido");
+        printf("Acesso permitido"); // Acertou
         return 0;
     } 
     else {
-        printf("Acesso negado\n");
+        printf("Acesso negado\n"); // Errou
         return 1;
     }
 }
@@ -28,10 +29,10 @@ int main() {
 
     do {
         printf("\nDigite a senha: \n");
-        scanf("%s", senha);
-    } while (VerificaSenha(senha, &cont));
+        scanf("%s", senha); // Leitura da string
+    } while (VerificaSenha(senha, &cont)); // Enquanto ela estiver errada
 
-    printf("\n\nTentativas: %d\n", cont);
+    printf("\n\nTentativas: %d\n", cont); // Mostra a quantidade de tentativas
 
     return 0;
 }
